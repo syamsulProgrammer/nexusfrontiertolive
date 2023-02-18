@@ -1,11 +1,12 @@
 var app = require('express')();
+const express = require('express');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var url = require('url');
 //var bodyParser = require('body-parser');
 
 //app.use(bodyParser.urlencoded());
-app.use(urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
 //app.use(bodyParser.json());
 
