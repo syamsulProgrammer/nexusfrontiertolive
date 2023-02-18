@@ -2,9 +2,10 @@ var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var url = require('url');
-var bodyParser = require('body-parser');
+//var bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded());
+//app.use(bodyParser.urlencoded());
+app.use(express.urlencoded({extended: true}));
 //app.use(bodyParser.json());
 
 var clientResponseRef;
