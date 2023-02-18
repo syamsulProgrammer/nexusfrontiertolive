@@ -5,7 +5,8 @@ var url = require('url');
 //var bodyParser = require('body-parser');
 
 //app.use(bodyParser.urlencoded());
-app.use(express.urlencoded({extended: true}));
+app.use(urlencoded({extended: true}));
+
 //app.use(bodyParser.json());
 
 var clientResponseRef;
