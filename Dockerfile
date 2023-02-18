@@ -7,6 +7,12 @@ WORKDIR /app
 # Copy the application files into the working directory
 COPY . /app
 
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+
+
 # Install the application dependencies
 RUN npm install
 
