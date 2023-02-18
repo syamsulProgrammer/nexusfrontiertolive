@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /app
 
 # Copy the application files into the working directory
-COPY . /app
+COPY . .
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -19,4 +19,5 @@ RUN npm install
 EXPOSE 3000/tcp
 
 # Define the entry point for the container
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
+CMD ["node", "server.js"]
