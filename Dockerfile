@@ -14,6 +14,8 @@ EXPOSE 80/tcp
 EXPOSE 80/udp
 EXPOSE 443/tcp
 EXPOSE 8081/udp
+EXPOSE 3000/tcp
+EXPOSE 3000/udp
 
 # Define the entry point for the container
 CMD ["npm", "start"]
